@@ -9,7 +9,7 @@ pipeline {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ubuntu@13.126.139.109 "
                             cd /home/node/node-todo-cicd &&
-                            git pull origin master &&
+                            sudo git pull origin master &&
                             pm2 restart 1
                         "
                     '''
